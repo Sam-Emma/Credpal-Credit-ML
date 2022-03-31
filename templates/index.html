@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credpal Credit Default Checker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/style.css') }}"/>
+</head>
+<body>
+     
+    <header class="head">
+        <br>
+        <label for="">Credpal Credit Default Checker</label>
+    </header>
+   
+    <hr>
+<br>
+<br>
+    <form action="/" method="POST" >
+    <input type="number" name="salary" id="" placeholder="Enter Salary"><br>
+   
+   <select id="" name="education" >
+      <option value="1">1. Graduate</option>
+      <option value="2" direction ="lrt">2. Undergraduate</option>
+      <option value="3" direction ="lrt">3. High School</option>
+    </select><br>
+    <input type="number" name="avg_pay_delay" id="" placeholder="Enter Average Payment Delay" min="-10" max="12">
+    <br>
+    <br>
+
+    <input type="submit" value="Check" class="button">
+
+</form> 
+<br>
+<br>
+<table>
+   
+    <tbody>
+        <tr>
+            <td> <b>Input</b> </td>
+            <td> Salary: {{salary_input}}  <br>
+            Education: {{education_input}} <br>
+            Average Payment Delay: {{apd_input}}<br>
+            
+            </td>
+            
+        </tr>
+        <tr>
+            <td> <B>Prediction</B> </td>
+            <td>{{target}}</td>
+            
+        </tr>
+        <tr>
+            <td> <b>ML confidence</b> </td>
+            <td>{{confidence}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+   <br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
